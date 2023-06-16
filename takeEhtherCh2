@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract takeEthers {
+
+    bool public isvalwei = 1 wei == 1;
+
+    bool public isvalGwei = 1 gwei == 1e9;   
+
+
+    bool public isvalEther = 1 ether == 1e18;
+
+
+    function receiveEther() public payable returns(uint){
+        return address(this).balance;
+    }
+}
